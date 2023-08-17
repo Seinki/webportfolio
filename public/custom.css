@@ -1,0 +1,78 @@
+/* untuk tombol experiences */
+
+.button-container {
+  display: flex;
+  /* position: fixed; */
+}
+
+.toggle-button {
+  margin-right: 10px;
+}
+
+.content-wrapper {
+  position: relative;
+}
+
+.content {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.content.active {
+  opacity: 1;
+  max-height: 1000px; /* Nilai yang cukup besar untuk mengakomodasi konten */
+}
+
+/* animasi untuk nama di hero section */
+
+.typewriter {
+  border-right: 2px solid grey;
+  white-space: nowrap;
+  overflow: hidden;
+  margin: 0;
+  padding-right: 5px;
+  display: inline-block;
+  animation: typing 3s steps(30, end), infinite;
+}
+
+/* Animasi mengetik */
+@keyframes typing {
+  from {
+      width: 0;
+  }
+  to {
+      width: 80%;
+  }
+}
+
+/* Stil untuk kursor berkedip */
+.blink-caret {
+  font-size: 0.8em;
+  animation: blink-caret .75s step-end infinite;
+}
+
+/* Animasi cursor berkedip */
+@keyframes blink-caret {
+  from, to {
+      opacity: 0;
+  }
+  50% {
+      opacity: 1;
+  }
+}
+
+/* Jeda setelah animasi mengetik selesai */
+@keyframes pause-typing {
+  from, to {
+      width: 100%;
+  }
+  50% {
+      width: 100%;
+  }
+  51%, 100% {
+      width: 0;
+  }
+}
+
